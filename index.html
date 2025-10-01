@@ -2,39 +2,132 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<title>What is LaTeX and how to use it.</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-		<title>reveal.js</title>
-
-		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
-
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<!-- Optionally add highlight.js or other plugins here -->
+		<style>
+			/* Optional: Style for your animated background */
+			#bg-animation {
+				position: fixed;
+				top: 0; left: 0; width: 100vw; height: 100vh;
+				z-index: 0;
+				pointer-events: none;
+			}
+			.reveal {
+				position: relative;
+				z-index: 1;
+				/* entferne font-size, damit Slides individuell */
+			}
+			/* Schriftgröße für die Tabelle der Vor- und Nachteile anpassen */
+			.vor-nachteile-table {
+				font-size: 1.35em; /* 50% größer als vorher */
+				width: 100%;
+				table-layout: fixed;
+			}
+			.vor-nachteile-table th, .vor-nachteile-table td {
+				padding: 0.5em 1em;
+				vertical-align: top;
+				word-break: break-word;
+			}
+			.vor-nachteile-table ol {
+				margin: 0;
+				padding-left: 1.2em;
+			}
+		</style>
 	</head>
 	<body>
+		<!-- Animated background placeholder -->
+		<canvas id="bg-animation"></canvas>
+		<!-- You can add your animated background JS below, or use a plugin -->
+		<!-- TODO: Add your animated background code here -->
+
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<!-- Titelseite -->
+				<section>
+					<h2>Was ist LaTeX und wie man es nutzt</h2>
+					<p>
+						<strong>Präsentiert von: Daniel Supper,</strong><br>
+						<strong>Moritz Heinzle, Samuel Findenig</strong>
+					</p>
+				</section>
+				<!-- Geschichtlicher Hintergrund mit Bild und linksbündigem Text -->
+				<section>
+					<h2>Geschichtlicher Hintergrund</h2>
+					<div style="display: flex; align-items: flex-start; gap: 2em;">
+						<img src="images/Leslie_Lamport.jpg" alt="Leslie Lamport" style="max-width: 240px; border-radius: 8px; margin-top: 2.0em;">
+						<div style="text-align: left;">
+							<p>
+								LaTeX wurde 1984 von Leslie Lamport entwickelt.<br>
+								Es basiert auf dem Textsatzsystem TeX, das von Donald E. Knuth 1978 erstellt wurde.<br>
+								LaTeX erleichtert das Schreiben von wissenschaftlichen und technischen Dokumenten.
+							</p>
+						</div>
+					</div>
+				</section>
+				<!-- Neue Folie: Vor- und Nachteile -->
+				<section style="font-size: 0.45em;">
+					<h1>Vor- und Nachteile von LaTeX</h1>
+					<table class="vor-nachteile-table">
+						<thead>
+							<tr>
+								<th></th>
+								<th>Vorteile</th>
+								<th>Nachteile</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>Techniker</th>
+								<td>
+									<ol>
+										<li>Präzise Darstellung von Formeln und Schaltplänen</li>
+										<li>Automatische Nummerierung und Verweise</li>
+										<li>Professionelles Layout</li>
+									</ol>
+								</td>
+								<td>
+									<ol>
+										<li>Einarbeitungszeit in die Syntax</li>
+										<li>Kein WYSIWYG-Editor</li>
+									</ol>
+								</td>
+							</tr>
+							<tr>
+								<th>Wissenschaftler</th>
+								<td>
+									<ol>
+										<li>Perfekte Unterstützung für mathematische Ausdrücke</li>
+										<li>Literaturverwaltung und Zitate</li>
+										<li>Gute Zusammenarbeit durch Textdateien (z.B. Git)</li>
+									</ol>
+								</td>
+								<td>
+									<ol>
+										<li>Komplexe Dokumente können schwierig zu debuggen sein</li>
+										<li>Grafiken und Tabellen erfordern mehr Aufwand</li>
+									</ol>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<!--Mo and Sam  you ad the section about compilers-->
+				</section>
+				<!-- Add more sections/slides below as needed -->
 			</div>
 		</div>
 
 		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
 		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				// Add plugins if needed
 			});
+			// Optionally, add your animated background JS here
+			// Example: animate the #bg-animation canvas
 		</script>
 	</body>
 </html>
