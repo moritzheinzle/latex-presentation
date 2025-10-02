@@ -44,6 +44,7 @@
 				margin: 0;
 				padding-left: 1.2em;
 			}
+
 		</style>
 	</head>
 	<body>
@@ -123,7 +124,220 @@
 						</tbody>
 					</table>
 				</section>
-				<!--Mo and Sam  you ad the section about compilers-->
+                <!-- Abschnitt: Grundlagen & Einstieg -->
+                <!-- Abschnitt: Grundlagen - Aufbau eines LaTeX-Dokuments -->
+                <section>
+                    <h2>LaTeX: Aufbau eines Dokuments</h2>
+                    <p>Ein LaTeX-Dokument besteht aus zwei Hauptteilen:</p>
+                    <ul>
+                        <li><strong>Präambel:</strong> Einstellungen, Pakete, Metadaten</li>
+                        <li><strong>Dokumentinhalt:</strong> Text, Formeln, Kapitel usw.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Minimalbeispiel</h2>
+                    <pre><code>\documentclass{article}
+
+\begin{document}
+Hello, World!
+\end{document}</code></pre>
+                    <p>Dies ist das kleinste vollständige LaTeX-Dokument.</p>
+                </section>
+
+                <section>
+                    <h2>\documentclass</h2>
+                    <p>Mit <code>\documentclass{...}</code> legst du die Dokumentklasse fest:</p>
+                    <pre><code>\documentclass{article}   % kurzer wissenschaftlicher Text
+\documentclass{report}    % längere Arbeiten mit Kapiteln
+\documentclass{book}      % Bücher mit Kapiteln und Abschnitten
+\documentclass{beamer}    % Präsentationen</code></pre>
+                </section>
+
+                <section>
+                    <h2>Optionen für \documentclass</h2>
+                    <p>Du kannst zusätzliche Optionen angeben:</p>
+                    <pre><code>\documentclass[12pt,a4paper]{article}</code></pre>
+                    <ul>
+                        <li><code>12pt</code>: Schriftgröße</li>
+                        <li><code>a4paper</code>: Papierformat</li>
+                        <li><code>twocolumn</code>: zweispaltig</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Präambel</h2>
+                    <p>In der Präambel (vor <code>\begin{document}</code>) definierst du:</p>
+                    <ul>
+                        <li>Paket-Importe mit <code>\usepackage</code></li>
+                        <li>Seiteneinstellungen, Kopf-/Fußzeilen</li>
+                        <li>Eigene Befehle und Layoutoptionen</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Pakete laden</h2>
+                    <p>Pakete erweitern LaTeX um Funktionen:</p>
+                    <pre><code>\usepackage[utf8]{inputenc}   % Umlaute
+\usepackage[T1]{fontenc}      % Schriftkodierung
+\usepackage{amsmath}          % Mathe-Erweiterungen
+\usepackage{graphicx}         % Bilder einfügen
+\usepackage{geometry}         % Seitenränder</code></pre>
+                </section>
+
+                <section>
+                    <h2>Titelinformationen</h2>
+                    <p>Du kannst Titel, Autor und Datum festlegen:</p>
+                    <pre><code>\title{Meine erste LaTeX-Arbeit}
+\author{Max Mustermann}
+\date{\today}
+
+\begin{document}
+\maketitle
+\end{document}</code></pre>
+                </section>
+
+                <section>
+                    <h2>Inhaltsverzeichnis</h2>
+                    <p>Mit <code>\tableofcontents</code> erzeugst du automatisch ein Inhaltsverzeichnis:</p>
+                    <pre><code>\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Einleitung}
+\section{Hauptteil}
+\section{Fazit}
+\end{document}</code></pre>
+                </section>
+
+                <section>
+                    <h2>Abschnitte und Unterabschnitte</h2>
+                    <p>Strukturiere dein Dokument mit:</p>
+                    <pre><code>\section{Kapitel 1}
+\subsection{Unterkapitel}
+\subsubsection{Teilabschnitt}</code></pre>
+                </section>
+
+                <section>
+                    <h2>Absätze und Zeilenumbrüche</h2>
+                    <p>LaTeX erkennt Absätze automatisch durch Leerzeilen:</p>
+                    <pre><code>Dies ist Absatz 1.
+
+Dies ist Absatz 2.</code></pre>
+                    <p>Zeilenumbruch: <code>\\</code></p>
+                </section>
+
+                <section>
+                    <h2>Kommentare</h2>
+                    <p>Kommentare beginnen mit <code>%</code> und werden nicht ausgegeben:</p>
+                    <pre><code>% Dies ist ein Kommentar
+Hier steht der eigentliche Text.</code></pre>
+                </section>
+
+                <!-- Abschnitt: Listen -->
+                <section>
+                    <h2>Aufzählungen</h2>
+                    <p>Mit <code>itemize</code> erzeugst du Listen:</p>
+                    <pre><code>\begin{itemize}
+  \item Punkt 1
+  \item Punkt 2
+\end{itemize}</code></pre>
+                </section>
+
+                <section>
+                    <h2>Nummerierte Listen</h2>
+                    <p>Mit <code>enumerate</code> erzeugst du nummerierte Listen:</p>
+                    <pre><code>\begin{enumerate}
+  \item Erster Punkt
+  \item Zweiter Punkt
+\end{enumerate}</code></pre>
+                </section>
+
+                <!-- Abschnitt: Zitate -->
+                <section>
+                    <h2>Zitate</h2>
+                    <p>Zitate kannst du manuell mit Anführungszeichen einfügen:</p>
+                    <pre><code>„Dies ist ein Zitat.“</code></pre>
+                    <p>Oder mit BibTeX (in echten LaTeX-Dokumenten):</p>
+                    <pre><code>\cite{Lamport1986}</code></pre>
+                </section>
+
+                <!-- Abschnitt: Tabellen -->
+                <section>
+                    <h2>Tabellen</h2>
+                    <p>Tabellen erstellt man mit <code>tabular</code>:</p>
+                    <pre><code>\begin{tabular}{l c r}
+Links & Mitte & Rechts \\
+A & B & C
+\end{tabular}</code></pre>
+                </section>
+
+                <!-- Abschnitt: Bilder -->
+                <section>
+                    <h2>Bilder einfügen</h2>
+                    <p>Mit <code>graphicx</code> kannst du Bilder einfügen:</p>
+                    <pre><code>\usepackage{graphicx}
+
+\begin{document}
+\includegraphics[width=0.5\textwidth]{bild.png}
+\end{document}</code></pre>
+                </section>
+
+                <!-- Abschnitt: Querverweise -->
+                <section>
+                    <h2>Labels und Referenzen</h2>
+                    <p>Verweise auf Abschnitte oder Formeln:</p>
+                    <pre><code>\section{Einleitung}\label{sec:intro}
+Siehe Abschnitt \ref{sec:intro}.</code></pre>
+                </section>
+
+                <!-- Abschnitt: Seitenlayout -->
+                <section>
+                    <h2>Seitenränder einstellen</h2>
+                    <p>Mit dem Paket <code>geometry</code> kannst du Seitenränder ändern:</p>
+                    <pre><code>\usepackage[a4paper,margin=2cm]{geometry}</code></pre>
+                </section>
+
+                <!-- Abschnitt: Neue Befehle -->
+                <section>
+                    <h2>Eigene Befehle definieren</h2>
+                    <p>Mit <code>\newcommand</code> kannst du Abkürzungen erstellen:</p>
+                    <pre><code>\newcommand{\R}{\mathbb{R}}
+\newcommand{\abs}[1]{\lvert #1 \rvert}</code></pre>
+                </section>
+
+                <!-- Abschnitt: Dokumentende -->
+                <section>
+                    <h2>Dokument beenden</h2>
+                    <p>Jedes Dokument endet mit:</p>
+                    <pre><code>\end{document}</code></pre>
+                </section>
+
+                <!-- Abschnitt: Komplettes Beispiel -->
+                <section>
+                    <h2>Komplettes Beispiel</h2>
+                    <pre><code>\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\title{Mein erstes Dokument}
+\author{Max Mustermann}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Einleitung}
+Hier beginnt dein Text.
+
+\section{Mathematik}
+Die berühmteste Formel: \(E = mc^2\)
+
+\end{document}</code></pre>
+                </section>
+
+                <!--Mo and Sam  you ad the section about compilers-->
 				</section>
                 <section>
                     <h2>Mathematik</h2>
