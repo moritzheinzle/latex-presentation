@@ -6,8 +6,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 		<!-- Optionally add highlight.js or other plugins here -->
 		<style>
+
+            pre { background: #222; color: #fff; padding: 0.5em; border-radius: 5px; font-size: 1.1em; }
+            .math { font-size: 2em; margin-top: 0.5em; }
+            h2 { font-size: 2em; margin-bottom: 0.5em; }
+            section .subsection { font-size: 1.3em; color: #aaa; margin-bottom: 0.3em; }
+
 			/* Optional: Style for your animated background */
 			#bg-animation {
 				position: fixed;
@@ -116,8 +125,284 @@
 				</section>
 				<!--Mo and Sam  you ad the section about compilers-->
 				</section>
-				<!-- Add more sections/slides below as needed -->
-			</div>
+                <section>
+                    <h2>Mathematik</h2>
+                </section>
+                <section>
+                    <h2>Grundlagen</h2>
+                    <section>
+                        <div class="subsection">Potenzen</div>
+                        <pre><code>x^2</code></pre>
+                        <p class="math">\(x^2\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Indizes</div>
+                        <pre><code>x_1</code></pre>
+                        <p class="math">\(x_1\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Indizes mehrdimensional</div>
+                        <pre><code>x_{ij}</code></pre>
+                        <p class="math">\(x_{ij}\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Bruch</div>
+                        <pre><code>\frac{a+b}{c+d}</code></pre>
+                        <p class="math">\(\frac{a+b}{c+d}\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Wurzel</div>
+                        <pre><code>\sqrt{a^2 + b^2}</code></pre>
+                        <p class="math">\(\sqrt{a^2 + b^2}\)</p>
+                    </section>
+                </section> <!-- Ende Grundlagen -->
+
+                <!-- Abschnitt: Summen, Produkte, Integrale -->
+                <section>
+                    <h2>Summen, Produkte & Integrale</h2>
+                    <section>
+                        <div class="subsection">Summenzeichen</div>
+                        <pre><code>\sum_{i=1}^{n} i^2</code></pre>
+                        <p class="math">\(\sum_{i=1}^{n} i^2\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Produktzeichen</div>
+                        <pre><code>\prod_{i=1}^{n} (i+1)</code></pre>
+                        <p class="math">\(\prod_{i=1}^{n} (i+1)\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Integral</div>
+                        <pre><code>\int_0^1 (x^2 + 1) dx</code></pre>
+                        <p class="math">\(\int_0^1 (x^2 + 1) dx\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Doppelintegral</div>
+                        <pre><code>\iint_D (x+y) dxdy</code></pre>
+                        <p class="math">\(\iint_D (x+y) dxdy\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Grenzwert</div>
+                        <pre><code>\lim_{x\to\infty} \frac{1}{x}</code></pre>
+                        <p class="math">\(\lim_{x\to\infty} \frac{1}{x}\)</p>
+                    </section>
+                </section> <!-- Ende Summen, Produkte & Integrale -->
+
+                <!-- Abschnitt: Ableitungen -->
+                <section>
+                    <h2>Ableitungen</h2>
+                    <section>
+                        <div class="subsection">Ableitung</div>
+                        <pre><code>\frac{d}{dx} (x^2 + 3x + 2)</code></pre>
+                        <p class="math">\(\frac{d}{dx} (x^2 + 3x + 2)\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Partielle Ableitung</div>
+                        <pre><code>\frac{\partial f}{\partial x} (x,y)</code></pre>
+                        <p class="math">\(\frac{\partial f}{\partial x} (x,y)\)</p>
+                    </section>
+                </section> <!-- Ende Ableitungen -->
+
+                <!-- Abschnitt: Matrizen / Vektoren -->
+                <section>
+                    <h2>Matrizen & Vektoren</h2>
+                    <section>
+                        <div class="subsection">Matrix</div>
+                        <pre><code>\begin{pmatrix}a & b\\c & d\end{pmatrix}</code></pre>
+                        <p class="math">\(\begin{pmatrix}a & b\\c & d\end{pmatrix}\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Vektor</div>
+                        <pre><code>\vec{v} = \begin{pmatrix}x\\y\\z\end{pmatrix}</code></pre>
+                        <p class="math">\(\vec{v} = \begin{pmatrix}x\\y\\z\end{pmatrix}\)</p>
+                    </section>
+                </section> <!-- Ende Matrizen & Vektoren -->
+
+                <!-- Abschnitt: Trigonometrie -->
+                <section>
+                    <h2>Trigonometrie</h2>
+                    <section>
+                        <div class="subsection">Sinus</div>
+                        <pre><code>\sin(\theta)</code></pre>
+                        <p class="math">\(\sin(\theta)\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Cosinus</div>
+                        <pre><code>\cos(\theta)</code></pre>
+                        <p class="math">\(\cos(\theta)\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Tangens</div>
+                        <pre><code>\tan(\theta)</code></pre>
+                        <p class="math">\(\tan(\theta)\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Arkussinus</div>
+                        <pre><code>\arcsin(x)</code></pre>
+                        <p class="math">\(\arcsin(x)\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Arkuscosinus</div>
+                        <pre><code>\arccos(x)</code></pre>
+                        <p class="math">\(\arccos(x)\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Arkustangens</div>
+                        <pre><code>\arctan(x)</code></pre>
+                        <p class="math">\(\arctan(x)\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Hyperbolische Sinusfunktion</div>
+                        <pre><code>\sinh(x)</code></pre>
+                        <p class="math">\(\sinh(x)\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Hyperbolische Cosinusfunktion</div>
+                        <pre><code>\cosh(x)</code></pre>
+                        <p class="math">\(\cosh(x)\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Hyperbolische Tangensfunktion</div>
+                        <pre><code>\tanh(x)</code></pre>
+                        <p class="math">\(\tanh(x)\)</p>
+                    </section>
+                </section>
+
+                <!-- Logarithmus & Exponential -->
+                <section>
+                    <h2>Logarithmus & Exponential</h2>
+                    <section>
+                        <div class="subsection">Exponentialfunktion</div>
+                        <pre><code>e^{x+y}</code></pre>
+                        <p class="math">\(e^{x+y}\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Natürlicher Logarithmus</div>
+                        <pre><code>\ln(a+b)</code></pre>
+                        <p class="math">\(\ln(a+b)\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Logarithmus Basis 10</div>
+                        <pre><code>\log_{10}(x)</code></pre>
+                        <p class="math">\(\log_{10}(x)\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Allgemeiner Logarithmus</div>
+                        <pre><code>\log_b(x)</code></pre>
+                        <p class="math">\(\log_b(x)\)</p>
+                    </section>
+                </section>
+                <!-- Abschnitt: Kombinatorik / Wahrscheinlichkeit -->
+                <section>
+                    <h2>Kombinatorik & Wahrscheinlichkeit</h2>
+                    <section>
+                        <div class="subsection">Kombination</div>
+                        <pre><code>\binom{n}{k} = \frac{n!}{k!(n-k)!}</code></pre>
+                        <p class="math">\(\binom{n}{k} = \frac{n!}{k!(n-k)!}\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Wahrscheinlichkeit</div>
+                        <pre><code>P(A \cup B) = P(A) + P(B)</code></pre>
+                        <p class="math">\(P(A \cup B) = P(A) + P(B)\)</p>
+                    </section>
+                </section> <!-- Ende Kombinatorik / Wahrscheinlichkeit -->
+
+                <!-- Abschnitt: Operatoren -->
+
+
+                <!-- Abschnitt: Symbole -->
+                <section>
+                    <h2>Symbole</h2>
+                    <section>
+                        <div class="subsection">Mengen</div>
+                        <pre><code>x \in A</code></pre>
+                        <p class="math">\(x \in A\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Nicht in Menge</div>
+                        <pre><code>x \notin B</code></pre>
+                        <p class="math">\(x \notin B\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Teilmenge</div>
+                        <pre><code>A \subseteq B</code></pre>
+                        <p class="math">\(A \subseteq B\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Kleiner / Größer</div>
+                        <pre><code>x \le y, \ x \ge y</code></pre>
+                        <p class="math">\(x \le y, \ x \ge y\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Pfeile</div>
+                        <pre><code>x \to y</code></pre>
+                        <p class="math">\(x \to y\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Langer Pfeil</div>
+                        <pre><code>x \longrightarrow y</code></pre>
+                        <p class="math">\(x \longrightarrow y\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Implikation</div>
+                        <pre><code>x \Rightarrow y</code></pre>
+                        <p class="math">\(x \Rightarrow y\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Betrag</div>
+                        <pre><code>|x|</code></pre>
+                        <p class="math">\(|x|\)</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Norm</div>
+                        <pre><code>\lVert x \rVert</code></pre>
+                        <p class="math">\(\lVert x \rVert\)</p>
+                    </section>
+                </section>
+                <!-- Add more sections/slides below as needed -->
+
+                <!-- Abschnitt: Zitate & Literatur -->
+
+
+                <!-- Abschnitt: Annotationen & Fußnoten -->
+                <section>
+                    <h2>Annotationen & Fußnoten</h2>
+                    <section>
+                        <div class="subsection">Fußnote</div>
+                        <pre><code>Dies ist ein Text mit einer Fußnote\footnote{Hier steht der Fußnotentext.}.</code></pre>
+                        <p class="math">Dies ist ein Text mit einer Fußnote¹.</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Anmerkung / Notiz</div>
+                        <pre><code>% Dies ist ein Kommentar, der nicht im PDF erscheint</code></pre>
+                        <p class="math">Kommentare helfen beim Dokumentieren des Codes.</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Margin Notes (mit Paket <code>marginnote</code>)</div>
+                        <pre><code>\marginnote{Wichtiger Hinweis am Rand}</code></pre>
+                        <p class="math">Erzeugt eine Randnotiz neben dem Text.</p>
+                    </section>
+                </section>
+
+                <!-- Abschnitt: Referenzen -->
+                <section>
+                    <h2>Referenzen & Verweise</h2>
+                    <section>
+                        <div class="subsection">Label und Referenz</div>
+                        <pre><code>\section{Einleitung}\label{sec:einleitung}
+Siehe Abschnitt \ref{sec:einleitung}.</code></pre>
+                        <p class="math">„Siehe Abschnitt 1.“</p>
+                    </section>
+                    <section>
+                        <div class="subsection">Gleichungsverweis</div>
+                        <pre><code>\begin{equation}\label{eq:energie}
+E = mc^2
+\end{equation}
+Siehe Gleichung \eqref{eq:energie}.</code></pre>
+                        <p class="math">„Siehe Gleichung (1).“</p>
+                    </section>
+                </section>
+
+            </div>
 		</div>
 
 		<script src="dist/reveal.js"></script>
